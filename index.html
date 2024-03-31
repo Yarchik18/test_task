@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/magnific-popup.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/_null.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Test task</title>
+</head>
+
+<body> 
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="header__logo">
+                        <a href="/">
+                            <img src="./img/png/logo.png" alt="Logo">
+                        </a>
+                    </div>
+                    <nav class="navbar menu">
+                        <ul class="nav__list">
+                            <li class="nav__list-item"><a href="#section-registration" id="form-link" class="nav-link">Форма</a></li>
+                            <li class="nav__list-item"><a href="#section-about" id="about-link" class="nav-link">Про мене</a></li>
+                            <li class="nav__list-item"><a href="#section-gallery" id="gallery-link" class="nav-link">Галерея</a></li>
+                            <li class="nav__list-item"><a href="#footer" id="contact-link" class="nav-link">Контакти</a></li>
+                        </ul>
+                        <div class="right-header__block">
+                            <div class="language-switcher">
+                                <ul class="languages-list">
+                                    <li class="list-item">
+                                        <a class="list-item-link active" onclick="switchLanguage('ua')" data-lang="ua">UA</a>
+                                    </li>
+                                    <li class="list-item">
+                                        <a class="list-item-link" onclick="switchLanguage('en')" data-lang="en">EN</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header-button main-button" >
+                                <a href="#footer" id="header-button">Досвід</a>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="header__burger">
+                        <div class="burger__body">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="shadow" id="shadow"></div>
+                </div>
+            </div>
+        </header>
+        
+        <main class="main">
+            <section class="section-registration" id="section-registration">
+                <div class="container">
+                    <div class="registration-content">
+                        <div class="video-part">
+                            <div class="video">
+                                <iframe src="https://www.youtube.com/embed/D7SlK16o82o?si=gTexREpK16vcewSr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                            </div>
+                        </div>
+                        <div class="form-part">
+                            <div class="form-title">
+                                <h3 id="form-title">Форма реєстрації</h3>
+                            </div>
+                            <div class="form-subtitle">
+                                <p id="form-subtitle">Залиште свої дані і ми відповімо на всі ваші питання.</p>
+                            </div>
+                            <form id="registrationForm" method="post" action="server.php" class="form-group">
+                                <div class="form-rows">
+                                    <div class="form-row-50">
+                                        <div class="form-row-item">
+                                            <label for="last-name" id="label-last-name" class="form-label">Прізвище</label>
+                                            <input type="text" class="form-control" id="input-last-name" name="last_name" placeholder="">
+                                            <div id="input-last-name-invalid" class="invalid-error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row-50">
+                                        <div class="form-row-item">
+                                            <label for="first-name" id="label-first-name" class="form-label">Ім'я</label>
+                                            <input type="text" class="form-control" id="input-first-name" name="first_name" placeholder="">
+                                            <div id="input-first-name-invalid" class="invalid-error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row-100">
+                                        <div class="form-row-item">
+                                            <label for="phone-number" id="label-phone-number" class="form-label">Телефон</label>
+                                            <input type="tel" class="form-control phone" id="input-phone-number" name="number" placeholder="+38 (123) 456 78 90">
+                                            <div id="input-phone-number-invalid" class="invalid-error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row-100">
+                                        <div class="form-row-item">
+                                            <label for="email" id="label-email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="input-email" name="e-mail" placeholder="email@example.com">
+                                            <div id="input-email-invalid" class="invalid-error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row-100">
+                                        <button type="submit" id="submitBtn" class="form-button">Зареєструватись</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-text" id="section-about">
+                <div class="container">
+                    <div class="text-container-content">
+                        <h2 class="main-title" id="text-block-title">Про мене</h2>
+                        <div class="subtitle">
+                            <p id="about-text">Привіт, мене звати Ярослав. Я цілеспрямований і відповідальний веб-розробник початківець, який постійно вивчає та вдосконалюється в області розробки веб-сайтів на базі PHP, HTML і CSS. Маю навички у вирішенні проблем та вмію ефективно працювати під тиском для досягнення встановлених термінів. Я прагну постійно розвивати свої вміння та вивчати нові технології як веб-розробник у вашій компанії.</p> 
+                                <p id="skills">Мої навички:</p>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>PHP</li>
+                                    <li>MySQL</li>
+                                    <li>WordPress, OpenCart</li>
+                                </ul>    
+                        </div>
+                        <div class="main-button">
+                            <a href="#footer" id="about-button">Дізнатись більше</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-gallery" id="section-gallery">
+                <div class="container">
+                    <div class="gallery-cards-content">
+                        <div class="gallery-cards-slider-container">
+                            <div class="gallery-cards-slider swiper-container">
+                                <div class="gallery-cards-slider__wrapper swiper-wrapper">
+                                    <div class="gallery-cards-slider__slide swiper-slide magnific">
+                                        <a href="./img/slide-1.jpg" data-source="./img/slide-1.jpg" class="image">
+                                            <img src="./img/slide-1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-cards-slider__slide swiper-slide magnific">
+                                        <a href="./img/slide-2.jpg" data-source="./img/slide-2.jpg" class="image">
+                                            <img src="./img/slide-2.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-cards-slider__slide swiper-slide magnific">
+                                        <a href="./img/slide-3.jpg" data-source="./img/slide-3.jpg" class="image">
+                                            <img src="./img/slide-3.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-cards-slider__slide swiper-slide magnific">
+                                        <a href="./img/slide-4.jpg" data-source="./img/slide-4.jpg" class="image">
+                                            <img src="./img/slide-4.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-cards-slider__slide swiper-slide magnific">
+                                        <a href="./img/slide-5.jpg" data-source="./img/slide-5.jpg" class="image">
+                                            <img src="./img/slide-5.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-card-navigation">
+                        <div class="gallery-nav-slider__btn-container">
+                            <div class="center-block">
+                                <div class="gallery-cards-slider__pagination">
+                                </div>
+                            </div>
+                            <div class="right-block">
+                                <div class="gallery-cards-slider__button-prev"></div>
+                                <div class="gallery-cards-slider__button-next"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="footer-wrapper">
+                    <div class="footer-left-block">
+                        <a class="footer__logo">
+                            <img src="./img/png/logo-footer.png" alt="">
+                        </a>
+                    </div>
+                    <div class="footer-right-block">
+                        <div class="footer-right-block__top">
+                            <div class="footer-column">
+                                <div class="footer-column-title" id="contacts-title">Контакти</div>
+                                <div class="footer-phone-number">
+                                    <a href="tel:380962511191">+38 096 251 11 91</a>
+                                </div>
+                                <div class="footer__social-networks">
+                                    <a href="tg://resolve?domain=yarchik" target="_blank">
+                                        <img src="./img/svg/footer-telegram.svg" alt="Social network">
+                                    </a>
+                                    <a href="viber://chat?number=380962511191" target="_blank">
+                                        <img src="./img/svg/footer-viber.svg" alt="Social network">
+                                    </a>
+                                    <a href="https://www.instagram.com/yarchik_m/" target="_blank">
+                                        <img src="./img/svg/footer-instagram.svg" alt="Social network">
+                                    </a>
+                                    <a href="https://www.facebook.com/profile.php?id=100017367185141" target="_blank">
+                                        <img src="./img/svg/footer-facebook.svg" alt="Social network">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-right-block__bottom">
+                            <div class="footer-column-title" id="my-experience-title">Mій досвід</div>
+                            <div class="footer-right-block__text">
+                                <p id="position">Був на позиції <b>Trainee Web developer</b> в веб студії Horenko Production протягом 4-місяців</p>
+                                <p id="tasks">Виконував такі задачі, як:</p>
+                                <ul>
+                                    <li id="tasks-li-1">Верстав не складні сайти на HTML/CSS/JS.</li>
+                                    <li id="tasks-li-2">Робив сайти на OpenCart/OCStore, вносив правки у верстку та функціонал інтернет-магазинів.</li>
+                                    <li id="tasks-li-3">Створював сайти на шаблоні та змінював верстку в Wordpress.</li>
+                                    <li id="tasks-li-4">Виконував натяжку верстки на Wordpress, за допомогою плагіна Carbon Fields.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./js/validation_form.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/jquery.magnific-popup.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/language.js"></script>
+    
+</body>
+</html>
